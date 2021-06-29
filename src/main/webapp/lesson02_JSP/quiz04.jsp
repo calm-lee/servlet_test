@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Quiz02</title>
+<title>사칙연산</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -12,10 +12,25 @@
 
 </head>
 <body>
-	<div class = "container">
-	<h1>날짜, 시간 링크</h1>
-		<a href="/lesson02_JSP/quiz02_1.jsp?type=time" class="btn btn-info text-white mt-3">현재 시간 확인</a></button>
-		<a href="/lesson02_JSP/quiz02_1.jsp?type=date" class="btn btn-success text-white mt-3">현재 날짜 확인</a></button>
+<div class="container">
+<h1>사칙 연산 계산기</h1>
+
+<form method="post" action="/lesson02_JSP/quiz04_1.jsp">
+
+	<div class="d-flex">
+	<input type="text" class="col-3 form-control" name="number1">
+	<select name = "cacluate" class="col-1 form-control ml-2">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>	
+		<option>/</option>
+	</select>
+	<input type="text" class="col-3 form-control ml-2" name="number2">
+	<button type="submit" class="btn bg-success form-control text-white col-1 ml-2">제출</button>
 	</div>
+	</div>
+</form>
+
+
 </body>
 </html>

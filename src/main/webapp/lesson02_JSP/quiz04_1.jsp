@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Quiz02</title>
+<title>사칙연산 결과</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -12,10 +12,36 @@
 
 </head>
 <body>
+
+	<%
+	int num1 = Integer.parseInt(request.getParameter("number1"));
+	int num2 = Integer.parseInt(request.getParameter("number2"));
+	String cal = request.getParameter("cacluate");
+	
+	double result = 0;
+	String printOperator = null;
+	
+	if(cal.equals("+")){
+		result = num1 + num2;
+		printOperator = "+";
+	} else if (cal.equals("-")){
+		result = num1 - num2;
+		printOperator = "-";
+	} else if (cal.equals("*")){
+		result = num1 * num2;
+		printOperator = "X";
+	} else if (cal.equals("/")){
+		result = num1 / num2;
+		printOperator = "/";
+	}
+	
+	%>
+
 	<div class = "container">
-	<h1>날짜, 시간 링크</h1>
-		<a href="/lesson02_JSP/quiz02_1.jsp?type=time" class="btn btn-info text-white mt-3">현재 시간 확인</a></button>
-		<a href="/lesson02_JSP/quiz02_1.jsp?type=date" class="btn btn-success text-white mt-3">현재 날짜 확인</a></button>
+		<h2>계산결과</h2>
+		<div class="display-3">
+		<%=num1 %> <%=printOperator %> <%=num2 %> = <span class="text-primary"><%=result %></span></div>
 	</div>
+	
 </body>
 </html>
