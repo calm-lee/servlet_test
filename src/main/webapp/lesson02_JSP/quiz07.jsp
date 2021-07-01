@@ -19,8 +19,9 @@
 <h1>메뉴 검색</h1>
 
 <div class="d-flex mt-3">
-<input type="text" class="form-control col-3" name="insert">
-<label for="exception"><input type="checkbox" class="ml-2" id="exception">
+<input type="text" class="form-control col-3" name="insertedMenu">
+<label for="exception"><input type="checkbox" class="ml-2" id="starPointFilter" name="starPointFilter"
+value="starPointFilter">
 4점 이하 제외</label>
 </div>
 
