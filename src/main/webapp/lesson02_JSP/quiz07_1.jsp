@@ -46,6 +46,7 @@
 </thead>
 <tbody>
 <%
+
 	String menu = request.getParameter("insertedMenu");
 
 	String starPointFilter = request.getParameter("starPointFilter");
