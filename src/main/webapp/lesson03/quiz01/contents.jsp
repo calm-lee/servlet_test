@@ -69,7 +69,7 @@ list.add(map);
 				
 				for(Map<String,String> item : list){
 					if(category != null && item.get("category").equals(category) == false){
-						//카테고리 값이 있고, 카테고리와 일치하지 않으면 skip을 시키겠다는 것
+						//카테고리 값이 없고, 카테고리와 일치하지 않으면 skip을 시키겠다는 것
 						continue;
 					} else {
 				%>
